@@ -1,0 +1,92 @@
+*{ padding: 0px; margin: 0px;box-sizing: border-box; }
+body{
+    background-image: url(/assets/bg-mobile.svg);
+    background-color: hsl(257, 40%, 49%);
+
+}
+/* Grid arrange start */
+.whole-body{
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+    grid-template-areas: 
+    ". hud hud hud hud hud . . . . . ."
+    ". img img img img img  img img img img img ."
+    ". tbc tbc tbc tbc tbc tbc tbc tbc tbc tbc . "
+    "but but but but but but but but but but but  but "
+    ;
+}
+.huddle-container{grid-area: hud;}
+.img-container{grid-area: img;background-image: url(/assets/illustration-mockups.svg);
+background-size: contain; background-repeat: no-repeat; height:17em; ;
+
+}
+.text-button-container{grid-area: tbc;}
+.icon-buttons{ grid-area: but;}
+/* Grid arrange end */
+
+/* Design*/
+.whole-body{ margin-top: 2em;}
+.huddle-container img{width: 10em;}
+.text-button-container{ color: white;
+display: flex;flex-direction: column; justify-content: space-around;text-align: center; height: 18em;}
+.text-container1 h1{ font-family:'Poppins', sans-serif; font-weight: 600; font-size: 24px;}
+.text-container2 p { font-family: 'Open Sans', sans-serif; font-weight: 400; font-size: 13px;}
+.button-container button {padding: 13px 80px;border-radius: 25px;border: none; 
+color: hsl(257, 40%, 49%) ; box-shadow: 1px 1px 15px 1px hsl(257, 41%, 28%);}
+button:hover{ background-color: hsl(300, 69%, 71%); cursor: pointer;}
+   
+.icon-buttons img {filter: invert(88%) sepia(88%) saturate(1%) hue-rotate(267deg) brightness(110%) contrast(97%); margin-top:5em;}
+.icon-buttons img:hover {filter: invert(81%) sepia(40%) saturate(3255%) hue-rotate(237deg) brightness(95%) contrast(92%); cursor: pointer;}
+.icon-buttons button {color: rgb(255, 255, 255); ;  background-color: inherit; border: none;
+margin-right: 15px; }
+.icon-buttons{display: flex;justify-content: center;}
+
+@media only screen and (min-width: 1440px) {
+    body{
+        background-image: url(/assets/bg-desktop.svg);
+     
+    
+    }
+    /* Grid arrange start */
+.whole-body{
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+    grid-template-areas: 
+    ". hud hud hud hud hud . . . . . ."
+    ". img img img img img  tbc tbc tbc tbc . ."
+    ". . . . . . . . . . . . "
+    ". . . . . . . . . . . . "
+    ". . . . . . . . . . . . "
+    ". . . . . . . . . . . . "
+    ". . . . . . . . but but but . "
+    ;
+}
+.huddle-container{grid-area: hud;}
+.img-container{grid-area: img;background-image: url(/assets/illustration-mockups.svg);
+background-size: contain; background-repeat: no-repeat; height:27em;
+
+}
+.text-button-container{grid-area: tbc;}
+.icon-buttons{ grid-area: but;}
+/* Grid arrange end */
+
+
+/* Design*/
+.whole-body{ margin-top: 2em;}
+.img-container, .text-button-container{ margin-top: 4em;}
+.huddle-container img{width: 15em;}
+.text-button-container{text-align: left;
+display: flex;flex-direction: column;justify-content:space-evenly ;padding: 0px 20px; }
+
+.text-container1 h1{ font-family:'Poppins', sans-serif; font-weight: 600;}
+.text-container2 p { font-family: 'Open Sans', sans-serif; font-weight: 400;}
+
+.button-container button {padding: 14px 50px;border-radius: 25px;border: none; 
+color: hsl(257, 40%, 49%) ; box-shadow: 1px 1px 15px 1px hsl(257, 41%, 28%);}
+button:hover{ background-color: hsl(300, 69%, 71%); cursor: pointer;}
+   
+.icon-buttons img {filter: invert(88%) sepia(88%) saturate(1%) hue-rotate(267deg) brightness(110%) contrast(97%); }
+.icon-buttons img:hover {filter: invert(81%) sepia(40%) saturate(3255%) hue-rotate(237deg) brightness(95%) contrast(92%); cursor: pointer;}
+.icon-buttons button {color: rgb(255, 255, 255); ;  background-color: inherit; border: none;
+margin-right: 15px;}
+}
